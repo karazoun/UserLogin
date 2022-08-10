@@ -39,23 +39,29 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
 
-    <EditText
-        android:id="@+id/et_password"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/etPasswordLayout"
         android:layout_width="335dp"
         android:layout_height="60dp"
         android:layout_marginTop="20dp"
-        android:layout_marginLeft="10dp"
-        android:background="@drawable/edittext_style"
-        android:ems="10"
-        android:hint="Enter your password"
-        android:inputType="textPassword"
-        android:paddingLeft="15dp"
-        android:drawableEnd="@drawable/eye"
+        app:passwordToggleEnabled="true"
+        app:hintEnabled="false"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.144"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_email"
-        app:passwordToggleEnabled="true" />
+        app:layout_constraintTop_toBottomOf="@+id/et_email">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_Password"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:hint="Enter your password"
+            android:background="@drawable/edittext_style"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_real_login"
@@ -69,7 +75,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.25"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_password" />
+        app:layout_constraintTop_toBottomOf="@+id/etPasswordLayout" />
 
     <TextView
         android:id="@+id/txt_forget"
@@ -80,7 +86,7 @@
         android:text="Forget Password?"
         android:clickable="true"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_password" />
+        app:layout_constraintTop_toBottomOf="@+id/etPasswordLayout" />
 
     <TextView
         android:id="@+id/textView3"

@@ -10,7 +10,6 @@ import android.widget.TextView;
 public class MovieDetails extends AppCompatActivity {
 
     TextView mTextStatus;
-    ScrollView mScrollView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,17 +17,8 @@ public class MovieDetails extends AppCompatActivity {
         setContentView(R.layout.activity_movie_details);
 
         mTextStatus = (TextView) findViewById(R.id.movie_descreption);
-        mScrollView = (ScrollView) findViewById(R.id.scroll);
 
-    }
+        mTextStatus.setMovementMethod(new ScrollingMovementMethod());
 
-    private void scrollToBottom() {
-        mScrollView.post(new Runnable()
-        {
-            public void run()
-            {
-                mScrollView.smoothScrollTo(0, mTextStatus.getBottom());
-            }
-        });
     }
 }
