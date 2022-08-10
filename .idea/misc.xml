@@ -5,8 +5,13 @@
       <map>
         <entry key="..\:/Users/karazoun/AndroidStudioProjects/UserLogin/app/src/main/res/drawable/edittext_password.xml" value="0.1465" />
         <entry key="..\:/Users/karazoun/AndroidStudioProjects/UserLogin/app/src/main/res/drawable/edittext_style.xml" value="0.1465" />
+        <entry key="..\:/Users/karazoun/AndroidStudioProjects/UserLogin/app/src/main/res/layout/activity_forget.xml" value="0.3416666666666667" />
         <entry key="..\:/Users/karazoun/AndroidStudioProjects/UserLogin/app/src/main/res/layout/activity_login.xml" value="0.3364102564102564" />
         <entry key="..\:/Users/karazoun/AndroidStudioProjects/UserLogin/app/src/main/res/layout/activity_movie_details.xml" value="0.3364102564102564" />
+        <entry key="..\:/Users/karazoun/AndroidStudioProjects/UserLogin/app/src/main/res/layout/activity_new_pass.xml" value="0.3416666666666667" />
+        <entry key="..\:/Users/karazoun/AndroidStudioProjects/UserLogin/app/src/main/res/layout/activity_pass_changed.xml" value="0.3416666666666667" />
+        <entry key="..\:/Users/karazoun/AndroidStudioProjects/UserLogin/app/src/main/res/layout/activity_register.xml" value="0.33" />
+        <entry key="..\:/Users/karazoun/AndroidStudioProjects/UserLogin/app/src/main/res/layout/activity_verification.xml" value="0.3416666666666667" />
         <entry key="..\:/Users/user/AndroidStudioProjects/UserLogin/app/src/main/res/drawable/button_register_style.xml" value="0.105" />
         <entry key="..\:/Users/user/AndroidStudioProjects/UserLogin/app/src/main/res/drawable/button_style.xml" value="0.105" />
         <entry key="..\:/Users/user/AndroidStudioProjects/UserLogin/app/src/main/res/drawable/edittext_style.xml" value="0.105" />
