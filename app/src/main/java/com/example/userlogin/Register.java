@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 public class Register extends AppCompatActivity {
@@ -15,6 +16,7 @@ public class Register extends AppCompatActivity {
     Button btnRegister;
     EditText userName,email, password, confirmPass;
     SharedPreferences sharedPreferences;
+    ImageView back;
 
     private static final String SHARED_PREF_NAME = "mypref";
     private static final String KEY_NAME = "name";
@@ -32,6 +34,7 @@ public class Register extends AppCompatActivity {
         email = findViewById(R.id.etEmail);
         password = findViewById(R.id.etPassword);
         confirmPass = findViewById(R.id.etConfirmPass);
+        back = findViewById(R.id.btn_back);
 
         sharedPreferences = getSharedPreferences(SHARED_PREF_NAME, MODE_PRIVATE);
 
@@ -62,6 +65,13 @@ public class Register extends AppCompatActivity {
                 else {
                     Toast.makeText(getApplicationContext(), "Fill the empty field", Toast.LENGTH_LONG).show();
                 }
+            }
+        });
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Register.super.finish();
             }
         });
     }

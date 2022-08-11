@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 public class NewPassActivity extends AppCompatActivity {
@@ -15,6 +16,7 @@ public class NewPassActivity extends AppCompatActivity {
     Button resetPass;
     EditText newPass, confirmNewPass;
     SharedPreferences sharedPreferences;
+    ImageView back;
 
     private static final String SHARED_PREF_NAME = "mypref";
     private static final String KEY_EMAIL = "email";
@@ -29,6 +31,7 @@ public class NewPassActivity extends AppCompatActivity {
         resetPass = findViewById(R.id.resetPass);
         newPass = findViewById(R.id.newPass);
         confirmNewPass = findViewById(R.id.confirmNewPass);
+        back = findViewById(R.id.btn_back);
 
         sharedPreferences = getSharedPreferences(SHARED_PREF_NAME, MODE_PRIVATE);
 
@@ -54,6 +57,13 @@ public class NewPassActivity extends AppCompatActivity {
                 } else {
                     Toast.makeText(getApplicationContext(), "Your password must be different from the old one", Toast.LENGTH_LONG).show();
                 }
+            }
+        });
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NewPassActivity.super.finish();
             }
         });
     }

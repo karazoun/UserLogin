@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,6 +19,7 @@ public class Login extends AppCompatActivity {
     Button btnRealLogin;
     TextView register, forget;
     SharedPreferences sharedPreferences;
+    ImageView back;
 
     private static final String SHARED_PREF_NAME = "mypref";
     private static final String KEY_NAME = "name";
@@ -34,6 +36,7 @@ public class Login extends AppCompatActivity {
         btnRealLogin = findViewById(R.id.btn_real_login);
         register = findViewById(R.id.reg);
         forget = findViewById(R.id.txt_forget);
+        back = findViewById(R.id.btn_back);
 
         sharedPreferences = getSharedPreferences(SHARED_PREF_NAME,MODE_PRIVATE);
 
@@ -69,6 +72,13 @@ public class Login extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), ForgetActivity.class);
                 startActivity(intent);
+            }
+        });
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Login.super.finish();
             }
         });
     }

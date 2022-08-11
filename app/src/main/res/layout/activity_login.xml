@@ -6,6 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".Login">
 
+    <include
+        android:id="@+id/toolbar_back"
+        layout="@layout/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -20,7 +27,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.098"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_back" />
 
     <EditText
         android:id="@+id/et_email_log"
@@ -44,11 +51,13 @@
         android:layout_width="335dp"
         android:layout_height="60dp"
         android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
         app:passwordToggleEnabled="true"
         app:hintEnabled="false"
         app:boxStrokeWidth="0dp"
         app:boxStrokeWidthFocused="0dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.25"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_email_log">
 
@@ -112,5 +121,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.212"
         app:layout_constraintStart_toEndOf="@+id/textView3" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

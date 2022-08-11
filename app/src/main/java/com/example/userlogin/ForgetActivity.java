@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -17,6 +18,7 @@ public class ForgetActivity extends AppCompatActivity {
     Button sendCode;
     EditText etForget;
     SharedPreferences sharedPreferences;
+    ImageView back;
 
     private static final String SHARED_PREF_NAME = "mypref";
     private static final String KEY_EMAIL = "email";
@@ -29,6 +31,7 @@ public class ForgetActivity extends AppCompatActivity {
         login = findViewById(R.id.txt_login);
         sendCode = findViewById(R.id.btn_sendCode);
         etForget = findViewById(R.id.et_email_forget);
+        back = findViewById(R.id.btn_back);
 
         sharedPreferences = getSharedPreferences(SHARED_PREF_NAME, MODE_PRIVATE);
 
@@ -53,6 +56,13 @@ public class ForgetActivity extends AppCompatActivity {
                 } else {
                     Toast.makeText(getApplicationContext(), "Invalid email", Toast.LENGTH_LONG).show();
                 }
+            }
+        });
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ForgetActivity.super.finish();
             }
         });
     }
