@@ -9,10 +9,10 @@
             </corners>
 
             <padding
-                android:bottom="10pt"
-                android:left="10pt"
-                android:right="10pt"
-                android:top="10pt">
+                android:bottom="8pt"
+                android:left="8pt"
+                android:right="8pt"
+                android:top="8pt">
             </padding>
 
             <solid android:color="#E6E4E4"></solid>
